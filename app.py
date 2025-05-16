@@ -371,10 +371,10 @@ elif analisis == "2. Permintaan & Daya Saing":
     kategori_terpilih = []
 
     kategori_list = df["Kategori"].dropna().unique()
-    kolom = st.columns(4)  # Ganti angka ini sesuai kebutuhan kolom
+    kolom = st.columns(3)  # Ganti angka ini sesuai kebutuhan kolom
 
     for i, kategori in enumerate(kategori_list):
-        with kolom[i % 4]:  # Bagi merata ke 3 kolom
+        with kolom[i % 3]:  # Bagi merata ke 3 kolom
             if st.checkbox(kategori, value=True):
                 kategori_terpilih.append(kategori)
 
